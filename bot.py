@@ -44,4 +44,4 @@ async def on_message(message):
         pic = message.content.split(" ")[1]
         await message.channel.send(file=discord.File(pic))
 
-client.run(token)
+client.run(access_token)
