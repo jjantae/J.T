@@ -5,9 +5,6 @@ from discord import file
 
 client = discord.Client()
 
-# 생성된 토큰을 입력해준다.
-access_token = os.environ["BOT_TOKEN"]
-token = (access_token)
 
 # 봇이 구동되었을 때 보여지는 코드
 @client.event
@@ -44,4 +41,5 @@ async def on_message(message):
         pic = message.content.split(" ")[1]
         await message.channel.send(file=discord.File(pic))
 
+access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
